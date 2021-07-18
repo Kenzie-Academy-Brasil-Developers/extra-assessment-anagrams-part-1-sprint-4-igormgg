@@ -1,0 +1,122 @@
+:root {
+    --title-font-size: 2rem;
+    --button-font-size: 1rem;
+    --result-font-size: 1rem;
+    --background-color: #333333;
+    --title-color: #27e8a7;
+    --input-background-color: #e4f0fb;
+    --button-background-color: #506477;
+    --button-text-color: #27e8a7;
+    --found-text-color: #add7ff;
+    --anagrams-text-color: #91b4d5;
+    --result-background-color: #434546;
+    --main-background-color: #242c2c;
+}
+
+html {
+    height: 100vh;
+    font-size: 20px;
+    background-color: var(--background-color);
+}
+
+body {
+    max-width: 1000px;
+    height: 100%;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    max-width: 750px;
+    height: 20%;
+    background-color: var(--main-background-color);
+    display: flex;
+    justify-content: center;
+}
+
+header h1 {
+    width: 300px;
+}
+
+header h1 {
+    text-align: center;
+    font-size: var(--title-font-size);
+    margin: 0px;
+    margin-top: 20px;
+    color: var(--title-color);
+}
+
+main {
+    max-width: 750px;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--main-background-color);
+}
+
+.main-box {
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#input {
+    width: 80%;
+    max-width: 650px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: var(--input-background-color);
+    border-radius: 5px;
+    border: none;
+}
+
+#findButton {
+    width: 150px;
+    border: none;
+    border-radius: 5px;
+    font-size: var(--button-font-size);
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+}
+
+#findButton:hover{
+    cursor: pointer;
+}
+
+.result {
+    width: 80%;
+    max-width: 650px;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--result-background-color);
+    font-size: var(--result-font-size);
+}
+
+.result__found {
+    color: var(--found-text-color);
+}
+
+.result__anagrams {
+    color: var(--anagrams-text-color);
+    width: 50px;
+}
+
+@media (min-width: 750px){
+    :root {
+        --title-font-size: 3rem;
+        --result-font-size: 2rem;
+    }
+    .result__anagrams {
+        width: 100px;
+    }
+}
